@@ -221,6 +221,8 @@ p {
 .info-hotel__img {
   background-image: url(../img/photo-hotel.jpg);
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   min-height: 100%;
   flex: 50%;
 }
