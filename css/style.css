@@ -24,6 +24,10 @@ body {
   font-size: 62.5%; /* 10px = 1rem */
 }
 
+body {
+  background-color: #f3f3f3;
+}
+
 a {
   color: #333;
   text-decoration: none;
@@ -32,9 +36,10 @@ a {
 .heading-1,
 .heading-2,
 .heading-3 {
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   font-family: var(--display-family);
   font-weight: 300;
+  line-height: 1;
 }
 
 .heading-1 {
@@ -82,11 +87,16 @@ p {
 .container {
   margin: auto;
   max-width: var(--max-width);
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
 }
 
 .text-primary {
   color: var(--primary-color);
+}
+
+.light-txt {
+  color: #fff;
 }
 
 .bg-primary {
@@ -116,6 +126,30 @@ p {
   margin-bottom: 2rem;
 }
 
+.pd-lg-top {
+  padding: 20rem 0;
+}
+
+.pd-md-top {
+  padding: 12rem 0;
+}
+
+.pd-sm-top {
+  padding: 5rem 0;
+}
+
+.pd-lg {
+  padding: 3rem 0;
+}
+
+.pd-md {
+  padding: 2rem 0;
+}
+
+.pd-sm {
+  padding: 1rem 0;
+}
+
 /* ----------- Header ----------- */
 
 .header {
@@ -123,6 +157,7 @@ p {
   position: fixed;
   z-index: 100;
   width: 100%;
+  max-width: var(--max-width);
 }
 /* ----------- Navbar ----------- */
 .nav {
@@ -193,7 +228,7 @@ p {
   color: #fff;
   background-attachment: fixed;
   text-align: center;
-  padding-top: 20rem;
+  /* padding: 20rem 0; */
 }
 
 .hero__large-text {
@@ -207,8 +242,10 @@ p {
   font-size: 2rem;
   width: 60%;
   margin: auto;
+
   line-height: 1.6;
   margin-bottom: 5rem;
+  max-width: 60%;
 }
 
 /* ----------- Info Hotel ----------- */
@@ -254,6 +291,78 @@ p {
 
 .feature__heading {
   text-transform: uppercase;
+}
+
+/* ----------- ABOUT PAGE ----------- */
+
+/* ----------- About ----------- */
+
+.about {
+  /* padding: 10rem 0; */
+  display: flex;
+  padding-bottom: 0;
+}
+
+.about__content,
+.about__display {
+  flex: 0 0 50%;
+}
+
+.about__content {
+  padding: 0 5rem;
+}
+
+.about__display {
+  overflow: hidden;
+}
+
+.about__img {
+  display: block;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  border-radius: 50%;
+}
+
+/* ----------- Testimonials ----------- */
+.testimonials {
+  background-image: linear-gradient(
+      rgba(100, 100, 100, 0.6),
+      rgba(100, 100, 100, 0.6)
+    ),
+    url("../img/photo.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 80%;
+  background-size: cover;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  padding: 2rem 3rem;
+  max-width: 80%;
+  margin-bottom: 2.5rem;
+  transform: skewX(25deg);
+  box-shadow: 0 0.7rem 0.7rem rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  opacity: 0.9;
+}
+
+.testimonial__text {
+  transform: skewX(-25deg);
+}
+
+.testimonial__img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  transform: skewX(-25deg);
+  margin-right: 2rem;
 }
 
 /* ----------- Footer ----------- */
